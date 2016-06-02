@@ -1,0 +1,54 @@
+name: openscad
+version: 2016.06.02
+summary: script file based graphical CAD environment
+description: |
+  OpenSCAD is a software for creating solid 3D CAD objects. It focuses on CAD
+  aspects rather than artistic ones.
+confinement: strict
+
+apps:
+  openscad:
+    command: qt5-launch usr/local/bin/openscad
+    plugs: [unity7, opengl, home]
+
+parts:
+  openscad:
+    plugin: qmake
+    source: git://github.com/openscad/openscad
+    build-packages:
+      - build-essential
+      - curl
+      - libffi-dev
+      - libxmu-dev
+      - cmake
+      - bison
+      - flex
+      - git-core
+      - libboost-all-dev
+      - libxi-dev
+      - libmpfr-dev
+      - libboost-dev
+      - libglew-dev
+      - libeigen3-dev
+      - libcgal-dev
+      - libopencsg-dev
+      - libgmp3-dev
+      - libgmp-dev
+      - imagemagick
+      - libfontconfig1-dev
+      - libfreetype6-dev
+      - gtk-doc-tools
+      - libglib2.0-dev
+      - gettext
+      - xvfb
+      - pkg-config
+      - ragel
+      - qtbase5-dev
+      - libqt5scintilla2-dev
+      - libqt5opengl5-dev
+      - qt5-qmake
+      - libharfbuzz-dev
+    stage-packages:
+      - libqt5gui5
+      - libgnomeui-0
+    after: [qt5conf]
