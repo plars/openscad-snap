@@ -1,10 +1,11 @@
-name: openscad
-version: 2016.06.02
+name: openscad-plars
+version: 2017.05.18
 summary: script file based graphical CAD environment
 description: |
   OpenSCAD is a software for creating solid 3D CAD objects. It focuses on CAD
   aspects rather than artistic ones.
 confinement: strict
+grade: stable
 
 apps:
   openscad:
@@ -14,6 +15,7 @@ apps:
 parts:
   openscad:
     plugin: qmake
+    qt-version: qt5
     source: git://github.com/openscad/openscad
     build-packages:
       - build-essential
@@ -34,6 +36,7 @@ parts:
       - libopencsg-dev
       - libgmp3-dev
       - libgmp-dev
+      - libxml2-dev
       - imagemagick
       - libfontconfig1-dev
       - libfreetype6-dev
