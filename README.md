@@ -1,3 +1,5 @@
+[![Snap Status](https://build.snapcraft.io/badge/plars/openscad-snap.svg)](https://build.snapcraft.io/user/plars/openscad-snap)
+
 # OpenSCAD Snap
 
 This project creates a working snap of OpenSCAD
